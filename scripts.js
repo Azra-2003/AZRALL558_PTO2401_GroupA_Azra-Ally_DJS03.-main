@@ -1,4 +1,4 @@
-// Import required data
+// Import data
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js';
 
 // Create a Web Component for displaying book previews
@@ -238,7 +238,7 @@ document.querySelector('[data-list-items]').addEventListener('preview-click', (e
     }
 });
 
-// Initialize the application
+// Initialise the app
 function init() {
     renderBookPreviews(matches);
     renderGenreOptions();
