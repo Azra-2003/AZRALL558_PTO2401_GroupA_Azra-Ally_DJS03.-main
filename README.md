@@ -15,10 +15,12 @@ The BookPreview Web Component is designed to display previews of books, includin
 
 ## Component Structure 🏗️ 
 
-javascript
+```javascript
 class BookPreview extends HTMLElement {
     // ... constructor, observedAttributes, attributeChangedCallback, etc.
 }
+```
+
 
 -**Constructor**: Initializes the component and attaches a shadow root.
 -**Observed Attributes**: Lists the attributes the component reacts to.
@@ -37,18 +39,20 @@ To use the BookPreview component within the app:
 
 -**Create Book Previews**: Use the renderBookPreviews function to create and display multiple book-preview elements.
 
-javascript
+```javascript
 const previewElement = document.createElement('book-preview');
 previewElement.setAttribute('data-id', book.id);
 previewElement.setAttribute('data-image', book.image);
 previewElement.setAttribute('data-title', book.title);
 previewElement.setAttribute('data-author', book.author);
-Handle Click Events: Listen for the preview-click event on the parent element containing the book previews. This allows you to respond to user interactions effectively.
+```
+-**Handle Click Events**: Listen for the preview-click event on the parent element containing the book previews. This allows you to respond to user interactions effectively.
 
-javascript
+```javascript
 document.querySelector('[data-list-items]').addEventListener('preview-click', (event) => {
  Handle the event
 });
+```
 
 -**Styling Considerations**: If you encounter issues with uniformity, consider adjusting styles in the render method, specifically by setting fixed widths and heights for image containers and text elements.
 
